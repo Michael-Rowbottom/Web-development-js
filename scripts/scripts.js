@@ -20,12 +20,13 @@ function recalculate() {
     
     if (modelName == 'XYZ') {
         totalCost =  modelDuration * 100; 
-        costLabel.innerHTML = console.log(totalCost.toFixed(2)); // Ensure the total cost is displayed with two decimal places
+        
     }       
     else if (modelName == 'CPRG') {
         totalCost =  modelDuration * 213;
-        costLabel.innerHTML = console.log(totalCost.toFixed(2));
+        
     }
+    costLabel.innerHTML = totalCost.toFixed(2)
 }
     
 
@@ -60,7 +61,7 @@ function changeModel() {
     recalculate();
 }
 
-switchModelButton.addEventListener("click", changeModel());
+switchModelButton.addEventListener("click", changeModel);
 
 
 
@@ -76,14 +77,14 @@ switchModelButton.addEventListener("click", changeModel());
 */
 
 var changeDurationButton = document.getElementById("duration-button");
-let duration;
 
 function changeDuration() {
     let durationText = document.getElementById("duration-text");
-    duration = prompt("Enter new duration:");
-    durationText = duration;
+    var duration = prompt("Enter new duration:");
+    modelDuration = duration;
     durationText.innerHTML = duration;
     recalculate();
 }
 
+changeDurationButton.addEventListener("click", changeDuration);
 changeDurationButton.addEventListener("click", changeDuration);
