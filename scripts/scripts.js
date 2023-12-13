@@ -1,7 +1,7 @@
 /****************** create variables ******************/
 /* create variables to hold the values for modelName and duration */
-let modelName = 'XYZ'; // You can initialize it with the default model name
-let modelDuration =0 ; // You can initialize it with the default duration
+var modelName = 'XYZ'; // You can initialize it with the default model name
+var modelDuration =0 ; // You can initialize it with the default duration
 
 /****************** helper function ******************/
 /* create a function called recalculate() which will
@@ -16,7 +16,7 @@ let modelDuration =0 ; // You can initialize it with the default duration
 
 function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
-    let totalCost;
+    var totalCost;
     
     if (modelName == 'XYZ') {
         totalCost =  modelDuration * 100; 
@@ -41,7 +41,7 @@ function recalculate() {
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
 
 
-let switchModelButton = document.getElementById("model-button");
+var switchModelButton = document.getElementById("model-button");
 
 
 function changeModel() {
@@ -75,7 +75,7 @@ switchModelButton.addEventListener("click", changeModel());
     - finally, attach this function to the "Change Duration" pseudo-button, so it runs whenever the button is clicked.
 */
 
-let changeDurationButton = document.getElementById("duration-button");
+var changeDurationButton = document.getElementById("duration-button");
 let duration;
 
 function changeDuration() {
